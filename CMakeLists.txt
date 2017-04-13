@@ -72,7 +72,7 @@ set(GRC_BLOCKS_DIR      ${GR_PKG_DATA_DIR}/grc/blocks)
 # Find gnuradio build dependencies
 ########################################################################
 set(GR_REQUIRED_COMPONENTS RUNTIME)
-find_package(Gnuradio "3.7.2" REQUIRED)
+find_package(Gnuradio "3.8" REQUIRED)
 
 if(NOT GNURADIO_RUNTIME_FOUND)
     message(FATAL_ERROR "GnuRadio Runtime required to compile gr-air-modes")

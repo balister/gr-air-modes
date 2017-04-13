@@ -217,7 +217,7 @@ class mainwindow(QtGui.QMainWindow):
         if sourceid == "UHD":
             try:
                 from gnuradio import uhd
-                self.src = uhd.single_usrp_source("", uhd.io_type_t.COMPLEX_FLOAT32, 1)
+                self.src = uhd.single_usrp_source("", uhd.stream_args('fc32'))
                 self.rates = [rate.start() for rate in self.src.get_samp_rates()
                               if (rate.start() % 2.e6) == 0 and rate >= 4e6]
                 self.antennas = self.src.get_antennas()
